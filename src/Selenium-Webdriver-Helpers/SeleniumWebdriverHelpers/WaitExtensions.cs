@@ -4,7 +4,7 @@ using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace Selenium_Webdriver_Helpers.App
+namespace SeleniumWebdriverHelpers
 {
     public static class WaitExtensions
     {
