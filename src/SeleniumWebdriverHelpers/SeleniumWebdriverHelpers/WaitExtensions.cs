@@ -24,6 +24,11 @@ namespace SeleniumWebdriverHelpers
             Wait(browser, locator, TimeSpan.FromMinutes(1));
         }
 
+        public static void WaitElement(this IWebDriver browser, By locator, TimeSpan timeSpan)
+        {
+            Wait(browser, locator, timeSpan);
+        }
+
         private static void Wait(IWebDriver browser, By locator, TimeSpan timespan)
         {
             IWait<IWebDriver> wait = new WebDriverWait(browser, timespan);
