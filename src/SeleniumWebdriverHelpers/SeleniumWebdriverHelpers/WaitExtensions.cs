@@ -29,10 +29,21 @@ namespace SeleniumWebdriverHelpers
             Wait(browser, locator, timeSpan);
         }
 
+        public static void WaitElementDisappear(this IWebDriver browser, By locator)
+        {
+            WaitDisappear(browser, locator, TimeSpan.FromMinutes(1));
+        }
+
         private static void Wait(IWebDriver browser, By locator, TimeSpan timespan)
         {
             IWait<IWebDriver> wait = new WebDriverWait(browser, timespan);
             wait.Until(d => d.FindElements(locator).Any());
+        }
+
+        private static void WaitDisappear(IWebDriver browser, By locator, TimeSpan timespan)
+        {
+            IWait<IWebDriver> wait = new WebDriverWait(browser, timespan);
+            wait.Until(d => d.FindElements(locator).Any() == false);
         }
     }
 }
