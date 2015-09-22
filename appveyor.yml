@@ -1,6 +1,6 @@
 deploy:
   provider: NuGet
   api_key:
-    secure: c531b238-e827-431a-bb50-04a7c7543833
+    secure: 24ja71arawax9lnmn66rr7c8
   skip_symbols: true
   artifact: 'nuget\*.nupkg'
