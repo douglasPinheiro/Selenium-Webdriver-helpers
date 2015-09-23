@@ -34,6 +34,11 @@ namespace SeleniumWebdriverHelpers
             WaitDisappear(browser, locator, TimeSpan.FromMinutes(1));
         }
 
+        public static void WaitElementDisappear(this IWebDriver browser, By locator, TimeSpan timeSpan)
+        {
+            WaitDisappear(browser, locator, timeSpan);
+        }
+
         private static void Wait(IWebDriver browser, By locator, TimeSpan timespan)
         {
             IWait<IWebDriver> wait = new WebDriverWait(browser, timespan);
