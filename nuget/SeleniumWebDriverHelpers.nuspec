@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Selenium-WebDriver-Helpers</id>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <authors>Douglas da Costa Pinheiro</authors>
     <owners>douglasPinheiro</owners>
     <licenseUrl>https://github.com/douglasPinheiro/Selenium-Webdriver-helpers/blob/master/LICENSE</licenseUrl>
@@ -11,7 +11,7 @@
     <description>Helper for seleniun webdriver</description>
     <releaseNotes>Wait for ajax, and wait element.</releaseNotes>
     <copyright>Copyright 2015</copyright>
-    <tags>Tag2</tags>
+    <tags>Tag1</tags>
     <dependencies>
       <dependency id="Selenium.Support" version="2.47.0" />
       <dependency id="Selenium.WebDriver" version="2.47.0" />
