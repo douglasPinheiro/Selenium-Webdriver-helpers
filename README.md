@@ -11,5 +11,16 @@ Helpers for Selenium WebDriver
 Install-Package Selenium-WebDriver-Helpers
 ```
 
+After install the package, add the assembly reference
+
+```c#
+  using SeleniumWebdriverHelpers;
+```
+
+Wait Example:
+```c#
+  var browser = new ChromeDriver();
+  browser.WaitElement(By.CssSelector("#id"));
+```
 
 # developing
