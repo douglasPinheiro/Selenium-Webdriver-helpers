@@ -8,7 +8,7 @@ namespace SeleniumWebdriverHelpers
 {
     public static class WaitExtensions
     {
-        private static TimeSpan DefaultTimeSpan = TimeSpan.FromMinutes(1);
+        private static TimeSpan _defaultTimeSpan = TimeSpan.FromMinutes(1);
 
         public static void WaitForAjax(this IWebDriver driver)
         {
@@ -23,7 +23,7 @@ namespace SeleniumWebdriverHelpers
 
         public static void WaitElement(this IWebDriver browser, By locator)
         {
-            Wait(browser, locator, DefaultTimeSpan);
+            Wait(browser, locator, _defaultTimeSpan);
         }
 
         public static void WaitElement(this IWebDriver browser, By locator, TimeSpan timeSpan)
@@ -33,7 +33,7 @@ namespace SeleniumWebdriverHelpers
 
         public static void WaitElementDisappear(this IWebDriver browser, By locator)
         {
-            WaitDisappear(browser, locator, DefaultTimeSpan);
+            WaitDisappear(browser, locator, _defaultTimeSpan);
         }
 
         public static void WaitElementDisappear(this IWebDriver browser, By locator, TimeSpan timeSpan)
@@ -43,7 +43,7 @@ namespace SeleniumWebdriverHelpers
 
         public static void WaitElementIsInvisible(this IWebDriver browser, By locator)
         {
-            WaitInvisible(browser, locator, DefaultTimeSpan);
+            WaitInvisible(browser, locator, _defaultTimeSpan);
         }
 
         public static void WaitElementIsInvisible(this IWebDriver browser, By locator, TimeSpan timeSpan)
@@ -53,7 +53,7 @@ namespace SeleniumWebdriverHelpers
 
         public static void WaitElementIsVisible(this IWebDriver browser, By locator)
         {
-            WaitVisible(browser, locator, DefaultTimeSpan);
+            WaitVisible(browser, locator, _defaultTimeSpan);
         }
 
         public static void WaitElementIsVisible(this IWebDriver browser, By locator, TimeSpan timeSpan)
