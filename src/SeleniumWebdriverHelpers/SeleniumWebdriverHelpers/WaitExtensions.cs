@@ -51,6 +51,16 @@ namespace SeleniumWebdriverHelpers
             WaitInvisible(browser, locator, timeSpan);
         }
 
+        public static void WaitElementIsVisible(this IWebDriver browser, By locator)
+        {
+            WaitVisible(browser, locator, DefaultTimeSpan);
+        }
+
+        public static void WaitElementIsVisible(this IWebDriver browser, By locator, TimeSpan timeSpan)
+        {
+            WaitVisible(browser, locator, timeSpan);
+        }
+
         private static void Wait(IWebDriver browser, By locator, TimeSpan timespan)
         {
             IWait<IWebDriver> wait = new WebDriverWait(browser, timespan);
@@ -67,6 +77,12 @@ namespace SeleniumWebdriverHelpers
         {
             IWait<IWebDriver> wait = new WebDriverWait(browser, timespan);
             wait.Until(d => !d.FindElements(locator).Any(e => e.Displayed));
+        }
+
+        private static void WaitVisible(IWebDriver browser, By locator, TimeSpan timespan)
+        {
+            IWait<IWebDriver> wait = new WebDriverWait(browser, timespan);
+            wait.Until(d => d.FindElements(locator).Any(e => e.Displayed));
         }
     }
 }
