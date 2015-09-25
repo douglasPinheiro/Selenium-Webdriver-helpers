@@ -17,9 +17,14 @@ After install the package, add the assembly reference
   using SeleniumWebdriverHelpers;
 ```
 
-Wait Example:
+Wait For Ajax:
 ```c#
   var browser = new ChromeDriver();
+  browser.WaitForAjax();
+```
+
+Wait Element:
+```c#
   browser.WaitElement(By.CssSelector("#id"));
 ```
 
