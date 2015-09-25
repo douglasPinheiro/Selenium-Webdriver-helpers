@@ -11,7 +11,7 @@
     <description>Helper for seleniun webdriver</description>
     <releaseNotes>Wait for ajax, and wait element.</releaseNotes>
     <copyright>Copyright 2015</copyright>
-    <tags>Tag1</tags>
+    <tags>Selenium WebDriver automation</tags>
     <dependencies>
       <dependency id="Selenium.Support" version="2.47.0" />
       <dependency id="Selenium.WebDriver" version="2.47.0" />
