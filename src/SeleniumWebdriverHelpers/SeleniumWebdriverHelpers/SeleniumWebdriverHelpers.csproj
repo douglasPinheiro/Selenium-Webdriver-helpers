@@ -48,7 +48,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IOExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectExtensions.cs" />
     <Compile Include="WaitExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
