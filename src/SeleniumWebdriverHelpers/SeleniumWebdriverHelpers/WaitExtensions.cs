@@ -14,7 +14,7 @@ namespace SeleniumWebdriverHelpers
         {
             while (true)
             {
-                var ajaxIsComplete = (bool)(driver as IJavaScriptExecutor).ExecuteScript("return jQuery.active == 0");
+                var ajaxIsComplete = (bool)(browser as IJavaScriptExecutor).ExecuteScript("return jQuery.active == 0");
                 if (ajaxIsComplete)
                     break;
                 Thread.Sleep(100);
