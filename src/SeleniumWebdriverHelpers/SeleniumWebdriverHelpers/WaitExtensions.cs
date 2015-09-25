@@ -10,7 +10,7 @@ namespace SeleniumWebdriverHelpers
     {
         private static TimeSpan _defaultTimeSpan = TimeSpan.FromMinutes(1);
 
-        public static void WaitForAjax(this IWebDriver driver)
+        public static void WaitForAjax(this IWebDriver browser)
         {
             while (true)
             {
