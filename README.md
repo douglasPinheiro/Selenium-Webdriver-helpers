@@ -33,4 +33,9 @@ Select Element
   browser.SelectElement(By.CssSelector("#id"));
 ```
 
+Set Text
+```c#
+  element.SetText("Text");
+```
+
 # developing
