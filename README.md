@@ -28,4 +28,9 @@ Wait Element:
   browser.WaitElement(By.CssSelector("#id"));
 ```
 
+Select Element
+```c#
+  browser.SelectElement(By.CssSelector("#id"));
+```
+
 # developing
