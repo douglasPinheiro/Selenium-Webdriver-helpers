@@ -21,44 +21,52 @@ namespace SeleniumWebdriverHelpers
             }
         }
 
-        public static void WaitElement(this IWebDriver browser, By locator)
+        public static IWebElement WaitElement(this IWebDriver browser, By locator)
         {
             Wait(browser, locator, _defaultTimeSpan);
+            return browser.SelectElement(locator);
         }
 
-        public static void WaitElement(this IWebDriver browser, By locator, TimeSpan timeSpan)
+        public static IWebElement WaitElement(this IWebDriver browser, By locator, TimeSpan timeSpan)
         {
             Wait(browser, locator, timeSpan);
+            return browser.SelectElement(locator);
         }
 
-        public static void WaitElementDisappear(this IWebDriver browser, By locator)
+        public static IWebElement WaitElementDisappear(this IWebDriver browser, By locator)
         {
             WaitDisappear(browser, locator, _defaultTimeSpan);
+            return browser.SelectElement(locator);
         }
 
-        public static void WaitElementDisappear(this IWebDriver browser, By locator, TimeSpan timeSpan)
+        public static IWebElement WaitElementDisappear(this IWebDriver browser, By locator, TimeSpan timeSpan)
         {
             WaitDisappear(browser, locator, timeSpan);
+            return browser.SelectElement(locator);
         }
 
-        public static void WaitElementIsInvisible(this IWebDriver browser, By locator)
+        public static IWebElement WaitElementIsInvisible(this IWebDriver browser, By locator)
         {
             WaitInvisible(browser, locator, _defaultTimeSpan);
+            return browser.SelectElement(locator);
         }
 
-        public static void WaitElementIsInvisible(this IWebDriver browser, By locator, TimeSpan timeSpan)
+        public static IWebElement WaitElementIsInvisible(this IWebDriver browser, By locator, TimeSpan timeSpan)
         {
             WaitInvisible(browser, locator, timeSpan);
+            return browser.SelectElement(locator);
         }
 
-        public static void WaitElementIsVisible(this IWebDriver browser, By locator)
+        public static IWebElement WaitElementIsVisible(this IWebDriver browser, By locator)
         {
             WaitVisible(browser, locator, _defaultTimeSpan);
+            return browser.SelectElement(locator);
         }
 
-        public static void WaitElementIsVisible(this IWebDriver browser, By locator, TimeSpan timeSpan)
+        public static IWebElement WaitElementIsVisible(this IWebDriver browser, By locator, TimeSpan timeSpan)
         {
             WaitVisible(browser, locator, timeSpan);
+            return browser.SelectElement(locator);
         }
 
         private static void Wait(IWebDriver browser, By locator, TimeSpan timespan)
