@@ -23,9 +23,15 @@ Wait For Ajax:
   browser.WaitForAjax();
 ```
 
-Wait Element:
+Wait methods:
 ```c#
   browser.WaitElement(By.CssSelector("#id"));
+
+  browser.WaitElementDisappear(By.CssSelector("#id"));
+
+  browser.WaitElementIsInvisible(By.CssSelector("#id"));
+
+  browser.WaitElementIsVisible(By.CssSelector("#id"));
 ```
 
 Select Element
@@ -38,4 +44,24 @@ Set Text
   element.SetText("Text");
 ```
 
-# developing
+Get Text
+```c#
+  element.GetText();
+```
+
+Without this package
+```c#
+  //private method
+  browser.WaitElement(By.CssSelector("#id"));
+
+  var element = browser.findElement(By.CssSelector("#id"));
+  element.Clear();
+  element.sendKeys("Text");
+```
+
+With this package
+```c#
+  browser.WaitElement(By.CssSelector("#id"))
+    .Clear()
+    .SetText("Text");
+```
