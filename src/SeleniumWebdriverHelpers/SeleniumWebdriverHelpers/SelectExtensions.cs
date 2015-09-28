@@ -9,14 +9,14 @@ namespace SeleniumWebdriverHelpers
 {
     public static class SelectExtensions
     {
-        public static IWebElement SelectElement(this IWebDriver browser, By by)
+        public static IWebElement SelectElement(this IWebDriver browser, By locator)
         {
-            return browser.FindElement(by);
+            return browser.FindElement(locator);
         }
 
-        public static IEnumerable<IWebElement> SelectElements(this IWebDriver browser, By by)
+        public static IEnumerable<IWebElement> SelectElements(this IWebDriver browser, By locator)
         {
-            return browser.FindElements(by);
+            return browser.FindElements(locator);
         }
     }
 }
