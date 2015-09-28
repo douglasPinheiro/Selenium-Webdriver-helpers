@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Selenium-WebDriver-Helpers</id>
-    <version>1.1.0</version>
+    <version>2.0.0</version>
     <authors>Douglas da Costa Pinheiro</authors>
     <owners>douglasPinheiro</owners>
     <licenseUrl>https://github.com/douglasPinheiro/Selenium-Webdriver-helpers/blob/master/LICENSE</licenseUrl>
@@ -13,8 +13,8 @@
     <copyright>Copyright 2015</copyright>
     <tags>Selenium WebDriver automation</tags>
     <dependencies>
-      <dependency id="Selenium.Support" />
-      <dependency id="Selenium.WebDriver" />
+      <dependency id="Selenium.Support" version="2.30.0"/>
+      <dependency id="Selenium.WebDriver" version="2.30.0"/>
     </dependencies>
   </metadata>
 </package>
