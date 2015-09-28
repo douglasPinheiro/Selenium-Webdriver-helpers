@@ -62,6 +62,6 @@ Without this package
 With this package
 ```c#
   browser.WaitElement(By.CssSelector("#id"))
-    .Clear()
+    .ClearText()
     .SetText("Text");
 ```
