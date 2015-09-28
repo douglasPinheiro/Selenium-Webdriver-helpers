@@ -31,5 +31,18 @@ namespace SeleniumWebdriverHelpers
             return browser.FindElements(locator)
                 .Where(d => d.GetText() == text);
         }
+
+        public static IWebElement SelectElementByAttribute(this IWebDriver browser, By locator, string attribute, string value)
+        {
+            return browser.FindElements(locator)
+                .Where(d => d.GetAttribute(attribute) == value)
+                .SingleOrDefault();
+        }
+
+        public static IEnumerable<IWebElement> SelectElementsByText(this IWebDriver browser, By locator, string attribute, string value)
+        {
+            return browser.FindElements(locator)
+                .Where(d => d.GetAttribute(attribute) == value);
+        }
     }
 }
