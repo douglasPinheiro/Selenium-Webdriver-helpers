@@ -34,9 +34,16 @@ Wait methods:
   browser.WaitElementIsVisible(By.CssSelector("#id"));
 ```
 
-Select Element
+Select methods:
 ```c#
   browser.SelectElement(By.CssSelector("#id"));
+  browser.SelectElements(By.CssSelector("tbody > tr"));
+
+  browser.SelectElementByText(By.CssSelector("#id"), "TextToSearch");
+  browser.SelectElementsByText(By.CssSelector("tbody > tr"), "TextToSearch");
+
+  browser.SelectElementByAttribute(By.CssSelector(".class"), "id", "1");
+  browser.SelectElementaByAttribute(By.CssSelector("tbody > tr"), "name", "douglas");
 ```
 
 Set Text
