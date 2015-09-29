@@ -10,13 +10,20 @@ namespace SeleniumWebdriverHelpers
     {
         private static TimeSpan _defaultTimeSpan = TimeSpan.FromMinutes(1);
 
-        public static void WaitForAjax(this IWebDriver browser)
+        public static void WaitForAjax(this IWebDriver browser, bool pageHasJQuery = true)
         {
             while (true)
             {
-                var ajaxIsComplete = (bool)(browser as IJavaScriptExecutor).ExecuteScript("return jQuery.active == 0");
+                var ajaxIsComplete = false;
+
+                if (pageHasJQuery)
+                    ajaxIsComplete = (bool)(browser as IJavaScriptExecutor).ExecuteScript("if (!window.jQuery) { return false; } else { return jQuery.active == 0; }");
+                else
+                    ajaxIsComplete = (bool)(browser as IJavaScriptExecutor).ExecuteScript("return document.readyState == 'complete'");
+
                 if (ajaxIsComplete)
                     break;
+
                 Thread.Sleep(100);
             }
         }
