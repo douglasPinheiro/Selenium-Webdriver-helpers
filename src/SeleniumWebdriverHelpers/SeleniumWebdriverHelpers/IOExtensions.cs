@@ -9,6 +9,11 @@ namespace SeleniumWebdriverHelpers
 {
     public static class IOExtensions
     {
+        public static IWebElement GetParent(this IWebElement element)
+        {
+            return element.FindElement(By.XPath(".."));
+        }
+
         public static void SetText(this IWebElement element, string text)
         {
             element.SendKeys(text);

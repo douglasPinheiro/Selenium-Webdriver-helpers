@@ -46,6 +46,13 @@ Select methods:
   browser.SelectElementaByAttribute(By.CssSelector("tbody > tr"), "name", "douglas");
 ```
 
+Get Parent:
+```c#
+  //Return ul element
+  browser.SelectElement(By.CssSelector("ul > li#id"))
+      .GetParent();
+```
+
 Set Text
 ```c#
   element.SetText("Text");
