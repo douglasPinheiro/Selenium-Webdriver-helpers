@@ -39,7 +39,7 @@ namespace SeleniumWebdriverHelpers
                 .SingleOrDefault();
         }
 
-        public static IEnumerable<IWebElement> SelectElementsByText(this IWebDriver browser, By locator, string attribute, string value)
+        public static IEnumerable<IWebElement> SelectElementByAttribute(this IWebDriver browser, By locator, string attribute, string value)
         {
             return browser.FindElements(locator)
                 .Where(d => d.GetAttribute(attribute) == value);
