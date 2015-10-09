@@ -4,12 +4,7 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.PhantomJS;
 using OpenQA.Selenium.Safari;
 using SeleniumWebdriverHelpers.ExampleTest.Actors.Abstractions;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SeleniumWebdriverHelpers.ExampleTest.Scenarios.Abstractions
 {
