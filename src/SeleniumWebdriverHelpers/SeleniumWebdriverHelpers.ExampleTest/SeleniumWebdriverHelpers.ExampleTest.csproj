@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Actors\Abstractions\ActorBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenarios\Abstractions\ScenarioBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
