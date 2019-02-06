@@ -6,6 +6,8 @@
 
 Helpers for Selenium WebDriver
 
+## Updated to Selenium.WebDriver and Selenium.Support to version: 3.141.0
+
 ```powershell
 
 Install-Package Selenium-WebDriver-Helpers
